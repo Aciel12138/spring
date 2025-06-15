@@ -55,6 +55,7 @@ public class JwtUtils {
         }
         Date now = new Date();
         long expire = Math.max(0, time.getTime() - now.getTime());
+        //不需要对应的key值
         template.opsForValue().set(Const.Jwt_BLACK_LIST + uuid, "", expire, TimeUnit.MILLISECONDS);
         return true;
     }
