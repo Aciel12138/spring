@@ -2,7 +2,13 @@ spring:
   mail:
     host: smtp.163.com
     username: 18904183715@163.com
-    password: ZCqvB9BTqBC8UxWk
+    password: BXqhLLSriFdPYpwY
+  rabbitmq:
+    host: 192.168.125.128
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /test
   security:
     filter:
       order: -100
@@ -14,3 +20,8 @@ spring:
     password: 1111
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cc
+  amqp:
+    deserialization:
+      allowed-list-patterns:
+        - "java.util.ArrayList"
+        - "java.util.HashMap"

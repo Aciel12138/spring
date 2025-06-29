@@ -7,4 +7,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface AccountService extends IService<Account>, UserDetailsService {
     Account findAccountNameOrEmail(String accountName);
+
+    String registerEmailVerifyCode(String type, String email, String ip);
 }
